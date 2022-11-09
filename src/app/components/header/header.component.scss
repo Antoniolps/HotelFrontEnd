@@ -1,0 +1,17 @@
+.header{
+    background-color: var(--primary);
+    padding: 30px 20px;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+
+    h1{
+        text-shadow: 0 0 5px black;
+        font-family: Roboto;
+        color: #fff;
+        font-size: 60px;
+        text-transform: uppercase;
+        margin-bottom: auto;
+        margin-top: auto;
+        text-indent: 1.5em;
+    }
+}
