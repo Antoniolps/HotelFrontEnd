@@ -1,1 +1,25 @@
-<app-form></app-form>
+<div class="container">
+    <form [formGroup]="clienteForm" (ngSubmit)="salvar()">
+            <div class="box">
+                <h1>Cadastro</h1>
+                <h3>Dados do cliente</h3>
+                    <div class="form-control">
+                        <label for="nome">Nome</label>
+                        <input type="text" placeholder="Informe seu nome" id="nome" formControlName="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="cpf">Cpf</label>
+                        <input type="text" placeholder="Informe seu CPF" id="cpf" formControlName="cpfCustomer">
+                    </div>
+                    <div class="form-control">
+                        <label for="rg">RG</label>
+                        <input type="text" placeholder="Informe seu RG" id="rg" formControlName="rgCustomer">
+                    </div>
+                    <div class="acoes">
+                        <button routerLink="" class="botaoOutlined">Voltar</button>
+                        <button type="submit" class="botaoPrimary">Enviar</button>
+                    </div>
+            </div>
+    </form>
+</div>
+
