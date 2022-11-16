@@ -1,0 +1,50 @@
+<div class="container">
+    <form [formGroup]="enderecoForm" (ngSubmit)="salvar()">
+            <div class="box">
+                <h1>Cadastro</h1>
+                <h3>Endereco</h3>
+                <div class="endereco">
+                    <div class="form-control">
+                        <label for="rua">Rua:</label>
+                        <input type="text" placeholder="Nome da rua" id="rua" formControlName="street">
+                    </div>
+                    <div class="numero">
+                        <label for="numero">Numero:</label>
+                        <input type="text" placeholder="Informe o numero" id="numero" formControlName="number">
+                    </div>
+                </div>
+                <div class="endereco2">
+                    <div class="cep">
+                        <label for="cep">Cep:</label>
+                        <input type="text" placeholder="Informe o cep" id="cep" formControlName="postalCode">
+                    </div>
+                    <div class="bairro">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" placeholder="Informe seu bairro" id="bairro" formControlName="district">
+                    </div>
+                </div>
+                    <div class="form-control">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" placeholder="Informe a cidade" id="cidade" formControlName="city">
+                    </div>
+                    <div class="form-control">
+                        <label for="estado">Estado:</label>
+                        <input type="text" placeholder="Informe o estado" id="estado" formControlName="state">
+                    </div>
+                <h3>Contatos</h3>
+                <form [formGroup]="contatoForm" (ngSubmit)="salvar()">
+                    <div class="form-control">
+                        <label for="email">Email:</label>
+                        <input type="text" placeholder="exemplo@email.com" id="email" formControlName="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" placeholder="(xx)99999-9999" id="telefone" formControlName="cellPhone">
+                    </div>
+                <div class="acoes">
+                    <button type="submit" class="botaoPrimary">Enviar</button>
+                </div>
+                </form>
+            </div>
+    </form>
+</div>

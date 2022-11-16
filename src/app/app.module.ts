@@ -8,6 +8,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroEnderecoComponent } from './pages/cadastro-endereco/cadastro-endereco.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     CadastroComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroEnderecoComponent
   ],
   imports: [
     BrowserModule,

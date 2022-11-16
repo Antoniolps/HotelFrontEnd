@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -23,7 +23,10 @@ export class CadastroComponent implements OnInit {
         rgCustomer: ['', [Validators.required]],
       })
     }
-
+    
+  
+  
+    
   ngOnInit(): void {
   }
 
@@ -31,15 +34,19 @@ export class CadastroComponent implements OnInit {
     if(this.clienteForm.valid){
       this.clienteService
       .cadastrarCliente(this.clienteForm.value)
-      .subscribe(() => {
-        this.router.navigate([""]);
+      .subscribe((res) => {
+        let resSTR = JSON.stringify(res);
+        let resJSON = JSON.parse(resSTR);
+        sessionStorage.setItem("id", resJSON.id);
+        this.router.navigate(["cadastro/endereco"]);
       }, error=> {
         alert("Não foi possivel realizar o cadastro.")
       });
     } else{
       alert("Verifique os campos obrigatórios!")
     }
-      
+    
+    
   }
 }
 
