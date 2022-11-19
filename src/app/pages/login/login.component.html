@@ -1,14 +1,14 @@
 <div class="container">
-    <form action="">
+    <form [formGroup]="userForm" (ngSubmit)="singIn()">
         <div class="box">
             <h1>Login</h1>
             <div class="form-control">
                 <label for="email">Email:</label>
-                <input type="text" placeholder="Email@email.com" id="email">
+                <input type="text" placeholder="Email@email.com" id="email" formControlName="userName">
             </div>
             <div class="form-control">
                 <label for="senha">Senha:</label>
-                <input type="password" placeholder="Senha" id="senha">
+                <input type="password" placeholder="Senha" id="senha" formControlName="password">
             </div>
             <div class="acoes">
                 <button class="botao">login</button>

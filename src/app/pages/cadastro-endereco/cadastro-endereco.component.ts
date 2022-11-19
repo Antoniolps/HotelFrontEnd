@@ -30,34 +30,31 @@ export class CadastroEnderecoComponent implements OnInit {
         district: ['', [Validators.required]],
         city: ['', [Validators.required]],
         state: ['', [Validators.required]],
-        postalCode: ['', [Validators.required]],
-        customerId: [this.idCliente.toString()]
+        postalCode: ['', [Validators.required]]
       })
       this.contatoForm = this.fb.group({
         cellPhone: ['', [Validators.required]],
-        email: ['', [Validators.email]],
-        customerId: [this.idCliente.toString()]
+        email: ['', [Validators.email, Validators.required]]
       })
     }
     
   ngOnInit(): void {
-    console.log(this.idCliente);
-    console.log(Guid.isGuid(this.idCliente));
+    
   }
 
-  salvar(){
+  salvarEndereco(){
     if(this.enderecoForm.valid && this.contatoForm.valid){
       this.enderecoService
-      .cadastrarEndereco(this.enderecoForm.value)
+      .cadastrarEndereco(this.enderecoForm.value, this.idCliente)
       .subscribe(() => {
       }, error => {
         alert("Não foi possivel realizar o cadastro.")
       });
 
       this.contatoService
-      .cadastrarContato(this.contatoForm.value)
+      .cadastrarContato(this.contatoForm.value, this.idCliente)
       .subscribe(() => {
-        this.router.navigate([""]);
+        this.router.navigate(["cadastro/senha"]);
       }, error => { 
         alert("Não foi possivel realizar o cadastro.")
       });

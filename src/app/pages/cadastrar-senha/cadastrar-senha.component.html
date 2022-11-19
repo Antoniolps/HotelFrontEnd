@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="senhaForm" (ngSubmit)="salvarSenha()">
+        <div class="box">
+            <h1>Cadastro</h1>
+            <h3>Cadastre uma senha</h3>
+            <div class="form-control">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" formControlName="password">
+            </div>
+            <div class="form-control">
+                <label for="confirmSenha">Confirme a senha: </label>
+                <input type="password" id="confirmSenha" formControlName="confirmPassword">
+            </div>
+            <div class="acoes">
+                <button type="submit" class="botaoPrimary">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>

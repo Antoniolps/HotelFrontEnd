@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroEnderecoComponent } from './pages/cadastro-endereco/cadastro-endereco.component';
+import { CadastrarSenhaComponent } from './pages/cadastrar-senha/cadastrar-senha.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CadastroEnderecoComponent } from './pages/cadastro-endereco/cadastro-en
     HomeComponent,
     CadastroComponent,
     LoginComponent,
-    CadastroEnderecoComponent
+    CadastroEnderecoComponent,
+    CadastrarSenhaComponent
   ],
   imports: [
     BrowserModule,

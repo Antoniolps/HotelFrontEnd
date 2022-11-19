@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'src/app/services/cliente.service';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -30,7 +30,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salvar(){
+  salvarCliente(){
     if(this.clienteForm.valid){
       this.clienteService
       .cadastrarCliente(this.clienteForm.value)
